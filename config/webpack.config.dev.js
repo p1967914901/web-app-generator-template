@@ -1,4 +1,3 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const packageConfig = require('../package.json');
@@ -15,12 +14,8 @@ module.exports = {
         ]
     },
     plugins: [
-        //  等待代码的类型检查结束，然后才提交代码进行编译
-        new ForkTsCheckerWebpackPlugin({
-            async: false
-        }),
         new ESLintPlugin({
-            extensions: ["js", "jsx", "ts", "tsx"],
+            extensions: ["js", "jsx"],
         }),
     ],
     devtool: 'eval-cheap-module-source-map',
