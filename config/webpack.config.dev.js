@@ -15,7 +15,7 @@ module.exports = {
     },
     plugins: [
         new ESLintPlugin({
-            extensions: ["js", "jsx"],
+            extensions: ["js"],
         }),
     ],
     devtool: 'eval-cheap-module-source-map',
